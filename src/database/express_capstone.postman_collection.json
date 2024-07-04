@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "493ea0dc-0110-485c-a200-a2eca8284a4f",
+		"_postman_id": "0dfa4c5e-bf35-43d4-a412-0ba0a753beca",
 		"name": "express_capstone",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "34764821"
@@ -34,7 +34,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"1232174@gmail.\",\r\n    \"matKhau\": \"1234\",\r\n    \"hoTen\": \"123\",\r\n    \"tuoi\": \"17\"\r\n}",
+							"raw": "{\r\n    \"email\": \"nguyenvana@gmail.com\",\r\n    \"matKhau\": \"1234\",\r\n    \"hoTen\": \"nguyenvana\",\r\n    \"tuoi\": \"17\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -156,7 +156,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/home/get-image-search/?tenHinh= hinh 1",
+							"raw": "{{domain}}/home/get-image-search/?tenHinh=snow",
 							"host": [
 								"{{domain}}"
 							],
@@ -168,7 +168,7 @@
 							"query": [
 								{
 									"key": "tenHinh",
-									"value": " hinh 1"
+									"value": "snow"
 								}
 							]
 						}
@@ -237,7 +237,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{domain-detail}}/get-image-save/2"
+						"url": "{{domain-detail}}/get-image-save/3"
 					},
 					"response": []
 				},
@@ -328,7 +328,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tenHinh\": \"Go12\",\r\n    \"duongDan\": \"https://a.a\",\r\n    \"moTa\": \"Good\"\r\n}",
+							"raw": "{\r\n    \"tenHinh\": \"Go12\",\r\n    \"duongDan\": \"https://image.com\",\r\n    \"moTa\": \"Good\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

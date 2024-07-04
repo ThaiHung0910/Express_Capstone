@@ -59,11 +59,15 @@ const getComment = async (req, res) => {
             where: {
                 hinh_id: hinhId
             },
-            include: {
+            include: [{
                 model: model.nguoi_dung,
                 as: "nguoi_dung",
                 attributes: ['email', 'ho_ten']
-            }
+            }, {
+                model: model.hinh_anh,
+                as: "hinh",
+                attributes: ["ten_hinh"]
+            }]
         })
 
         if (!comments) {
@@ -85,9 +89,9 @@ const getComment = async (req, res) => {
             })
         })
 
-
         const newData = {
             id: comments[0].hinh_id,
+            tenHinh: comments[0].hinh.ten_hinh,
             danhSachBinhLuan: listUserComment
         }
 

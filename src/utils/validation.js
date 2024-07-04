@@ -59,7 +59,7 @@ const validationUser = (data, type) => {
   }
 
   if (!isValidAge(tuoi)) {
-    return "Dữ liệu tuổi không hợp lệ";
+    return "Tuổi không hợp lệ";
   }
 
   return null
