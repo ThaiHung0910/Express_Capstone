@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "493ea0dc-0110-485c-a200-a2eca8284a4f",
+		"name": "express_capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34764821"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user7@gmail.com\",\r\n    \"matKhau\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain-user}}/login"
+					},
+					"response": []
+				},
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"1232174@gmail.\",\r\n    \"matKhau\": \"1234\",\r\n    \"hoTen\": \"123\",\r\n    \"tuoi\": \"17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain-user}}/sign-up"
+					},
+					"response": []
+				},
+				{
+					"name": "get-info-user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{domain-user}}/get-info-user"
+					},
+					"response": []
+				},
+				{
+					"name": "upload-avatar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hinhAnh",
+									"type": "file",
+									"src": "/D:/Picture/Ảnh-nền-máy-tính-đẹp.jpg"
+								}
+							]
+						},
+						"url": "{{domain-user}}/upload-avatar"
+					},
+					"response": []
+				},
+				{
+					"name": "update-user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matKhau\": \"1234\",\r\n    \"hoTen\": \"tha\",\r\n    \"tuoi\": \"23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain-user}}/update-user"
+					},
+					"response": []
+				},
+				{
+					"name": "reset-token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{domain-user}}/reset-token"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "home",
+			"item": [
+				{
+					"name": "get-list-image",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{domain}}/home/get-list-image"
+					},
+					"response": []
+				},
+				{
+					"name": "get-image",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/home/get-image-search/?tenHinh= hinh 1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"home",
+								"get-image-search",
+								""
+							],
+							"query": [
+								{
+									"key": "tenHinh",
+									"value": " hinh 1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "detail",
+			"item": [
+				{
+					"name": "get-info-image",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{domain-detail}}/get-info-image/4"
+					},
+					"response": []
+				},
+				{
+					"name": "get-comment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain-detail}}/get-comment/2",
+							"host": [
+								"{{domain-detail}}"
+							],
+							"path": [
+								"get-comment",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-image-save",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{domain-detail}}/get-image-save/2"
+					},
+					"response": []
+				},
+				{
+					"name": "save-comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"noiDung\": \"Good Picture\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain-detail}}/save-comment/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "image",
+			"item": [
+				{
+					"name": "get-list-image-save",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{domain-image}}/get-list-image-save"
+					},
+					"response": []
+				},
+				{
+					"name": "get-list-image-create",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{domain-image}}/get-list-image-create"
+					},
+					"response": []
+				},
+				{
+					"name": "delete-image-create",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{domain-image}}/delete-image-create/2"
+					},
+					"response": []
+				},
+				{
+					"name": "add-image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenHinh\": \"Go12\",\r\n    \"duongDan\": \"https://a.a\",\r\n    \"moTa\": \"Good\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain-image}}/add-image"
+					},
+					"response": []
+				},
+				{
+					"name": "save-image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{domain-image}}/save-image/1"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjo3LCJrZXkiOiJISnBPcGwifSwiaWF0IjoxNzE5ODQwMzQ4LCJleHAiOjE3MjA0NDUxNDh9.KKOvxGd9uTxNzhZRVGIlsyXNVWrLQxn0Cdv_tlwl8gw",
+			"type": "string"
+		},
+		{
+			"key": "domain-user",
+			"value": "localhost:8080/user",
+			"type": "string"
+		},
+		{
+			"key": "domain-detail",
+			"value": "localhost:8080/detail",
+			"type": "string"
+		},
+		{
+			"key": "domain-image",
+			"value": "localhost:8080/image",
+			"type": "string"
+		}
+	]
+}
