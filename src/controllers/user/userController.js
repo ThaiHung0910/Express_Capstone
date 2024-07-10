@@ -65,7 +65,7 @@ const login = async (req, res) => {
     });
 
     if (!user) {
-      return responseSend(res, "", "Email không tồn tại", 403);
+      return responseSend(res, "", "Sai email!", 403);
     }
 
     let isMatch = false;
@@ -102,7 +102,7 @@ const login = async (req, res) => {
 
       responseSend(res, { accessToken: token }, "Thành công!", 200);
     } else {
-      responseSend(res, "", "Sai mật khẩu ", 403);
+      responseSend(res, "", "Sai mật khẩu!", 403);
     }
 
   } catch (err) {
